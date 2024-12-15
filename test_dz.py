@@ -25,6 +25,8 @@ class TestMath(unittest.TestCase):
     def test_modulus(self):
         self.assertEqual(modulus(10, 3), 1)
         self.assertEqual(modulus(20, 7), 6)
+
+        self.assertEqual(modulus(20, 0), 6)
         with self.assertRaises(ValueError):
             modulus(10, 0)
 
